@@ -39,11 +39,11 @@ void TECMFS::esperaPeticion() {
         memset(buffer,0,1024);
         memset(bufferEnvio,0,1024);
 
-        json solicitudCliente = json::parse( nodeCliente->recibeDatos(30) ); //Le llega la solicitud del Cliente
+        json solicitudCliente = json::parse( nodeCliente->recibeDatos(15) ); //Le llega la solicitud del Cliente
         Solicitud = solicitudCliente["Solicitud"];
 
-        strcpy(bufferEnvio,"**Procesando Solicitud**\n");
-        nodeCliente->enviarDatos(bufferEnvio);
+//        strcpy(bufferEnvio,"**Procesando Solicitud**\n");
+//        nodeCliente->enviarDatos(bufferEnvio);
 
         memset(buffer,0,1024);
         memset(bufferEnvio,0,1024);
