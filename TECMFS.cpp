@@ -17,6 +17,13 @@ TECMFS::TECMFS( int id) {
     this->port      = root.child(("Node" + std::to_string(id)).c_str()).attribute("port").as_int();
 
     this->nodeCliente = new TECMFSNODE(sockaddr_in(), id, this->ip, this->port);
+
+    std::cout << "TECMFS: " << "DiskNode" + std::to_string(id) << " creado." << std::endl;
+}
+
+TECMFS::~TECMFS() {
+    nodeCliente->detener();
+    std::cout << "DisckNode Desconectado " << std::endl;
 }
 
 
@@ -51,8 +58,6 @@ void TECMFS::esperaPeticion() {
         std::cout << "Ya se manejó la solicitud" << std::endl;
 
 
-
-
     }
 }
 
@@ -68,10 +73,12 @@ void TECMFS::manejoSolicitud(int solicitud) {
     std::cout << "**Solicitud: "<< solicitud << "**" << std::endl;
     switch ( solicitud ){
         case 1: {
+            nodeCliente->recibirVideo(this->pathDisco);
             break;
         }
 
         case 2:{
+            nodeCliente->subirVideo(this->pathDisco);
             break;
         }
     }
