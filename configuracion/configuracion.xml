@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Configuracion>
+    <Node1 ip="192.168.100.19" path="/Users/d4n11083/Documents/CLion_Projects/DiskNode/Discos/Disco1.mp4" port="8001" />
+    <Node2 ip="192.168.100.19" path="/Users/d4n11083/Documents/CLion_Projects/DiskNode/Discos/Disco2.mp4" port="8001" />
+    <Node3 ip="192.168.100.19" path="/Users/d4n11083/Documents/CLion_Projects/DiskNode/Discos/Disco3.mp4" port="8001" />
+    <Node3 ip="192.168.100.19" path="/Users/d4n11083/Documents/CLion_Projects/DiskNode/Discos/Disco4.mp4" port="8001" />
+
+</Configuracion>

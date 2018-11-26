@@ -1,0 +1,2 @@
+#define DIRECCION_IP "192.168.100.19"
+#define PORT 8001
